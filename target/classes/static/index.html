@@ -4,14 +4,12 @@
 </style>
 </head>
 <body>
-
-
-                        <legend class="text-center header">Number</legend>
-                        <div class="form-group">
-                            <div class="col-md-8">
-                                <input id="num" name="num" type="number" placeholder="Number space" class="form-control">
-                            </div>                            
-    </div>                                                                        
-    <input type="submit" value="Submit" onclick='this.form.action="/respuesta?value=" + document.getElementById("num").value;'><br>                        
+	<legend class="text-center header">Square of...</legend>
+        <div class="form-group">
+		<div class="col-md-8">
+			<input id="number" name="number" type="number" placeholder="Write your number" class="form-control">
+                </div>                            
+        </div>                                                                        
+    	<input type="submit" value="Submit" onclick='this.form.action="/square?number=" + document.getElementById("number").value;'><br>                        
 </body>
 </html>

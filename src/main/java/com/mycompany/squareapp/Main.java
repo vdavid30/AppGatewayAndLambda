@@ -21,10 +21,7 @@ import static spark.Spark.staticFileLocation;
  *
  * @author 2114928
  */
-public class SquareApp {
-    public SquareApp(){
-    
-    }
+public class Main {
     public static void main(String[] args){
         staticFileLocation("/static");
         get("/square", (Request req,Response res) -> {
@@ -32,8 +29,6 @@ public class SquareApp {
         });
     }
     public static String getResponse (int numero) throws MalformedURLException, IOException {
-        port(8080);
-        init();
         String URL_API = "https://8qyaty9r75.execute-api.us-west-2.amazonaws.com/squareDeploy/square?value=" + String.valueOf(numero);
         URL num = new URL(URL_API);
         String response = "";
